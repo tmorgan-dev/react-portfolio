@@ -1,7 +1,11 @@
+import '../styles/Header.css';
+
 function Header() {
     return (
         <div>
-            <p>Hello, World!</p>
+            <header className="header">
+                <h1 className="header h1">Tim Morgan</h1>
+            </header>
         </div>
     );
 }

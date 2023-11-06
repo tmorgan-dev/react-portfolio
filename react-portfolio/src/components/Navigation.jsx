@@ -1,8 +1,13 @@
+import '../styles/Navigation.css';
+
 function Navigation() {
     return (
-        <div>
-            <p>Hello, World!</p>
-        </div>
+        <nav className="navbar">
+            <a href="#bio">Biography</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact Information</a>
+            <a href="#resume">Resume</a>
+        </nav>
     );
 }
 
