@@ -11,6 +11,7 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     try {
+      //TODO: Move these to a .ENV file
       const templateId = 'template_4tlpkcd';
       const userId = 'sCxpV-9Nj61D4BLq7';
 
@@ -23,18 +24,19 @@ const Contact = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <label>Name:</label>
+    <form onSubmit={handleSubmit(onSubmit)} className="text-white text-md">
+      <div className="mb-4">
+        <label className="block">Name:</label>
         <input
           {...register('name', { required: 'Name is required' })}
           type="text"
+          className="w-1/4 h-[2rem] px-3 py-2 border rounded"
         />
-        <p>{errors.name?.message}</p>
+        <p className="text-red-500">{errors.name?.message}</p>
       </div>
 
-      <div>
-        <label>Email:</label>
+      <div className="mb-4">
+        <label className="block">Email:</label>
         <input
           {...register('email', {
             required: 'Email is required',
@@ -44,20 +46,26 @@ const Contact = () => {
             },
           })}
           type="email"
+          className="w-1/4 h-[2rem] px-3 py-2 border rounded"
         />
-        <p>{errors.email?.message}</p>
+        <p className="text-red-500">{errors.email?.message}</p>
       </div>
 
-      <div>
-        <label>Message:</label>
+      <div className="mb-4">
+        <label className="block">Message:</label>
         <textarea
           {...register('message', { required: 'Message is required' })}
+          className="w-full h-[4rem] px-3 py-2 border rounded"
         />
-        <p>{errors.message?.message}</p>
+        <p className="text-red-500">{errors.message?.message}</p>
       </div>
 
-      <button type="submit">Submit</button>
-      
+      <button
+        type="submit"
+        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Submit
+      </button>
     </form>
 
   );

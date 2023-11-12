@@ -1,4 +1,4 @@
-import '../styles/Project.css';
+import "tailwindcss/tailwind.css"
 
 import dndquickImage from "../assets/images/dndquick.png";
 import masterBuilderImage from "../assets/images/masterBuilder.png";
@@ -60,15 +60,31 @@ const projects = [
 
 function Project() {
     return (
-        <div>
+        <div className="flex flex-wrap justify-center">
             {projects.map((project) => (
-                <div className="cardFormat">
-                    <img className="imageFormat" src={project.image} />
-                    <div>
-                        <h5>Name: {project.name}</h5>
-                        <p>Description: {project.description}</p>
-                        <a href="#">{project.deployedApp}</a>
-                        <a href="#">{project.repo}</a>
+                <div key={project.id} className="max-w-xs mx-4 my-4 bg-white rounded-md overflow-hidden shadow-md">
+                    <img className="w-full h-32 object-cover" src={project.image} alt={project.name} />
+                    <div className="p-4">
+                        <h5 className="text-lg font-semibold">{project.name}</h5>
+                        <p className="text-gray-700">{project.description}</p>
+                        <div className="mt-4">
+                            <a
+                                href={project.deployedApp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-blue-500 text-white px-4 py-2 rounded mr-2 hover:bg-blue-600"
+                            >
+                                Deployed App
+                            </a>
+                            <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900"
+                            >
+                                GitHub Repo
+                            </a>
+                        </div>
                     </div>
                 </div>
             ))}
