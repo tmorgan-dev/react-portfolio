@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 
@@ -11,7 +11,7 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     try {
-      //TODO: Move these to a .ENV file
+      // TODO: Move these to a .ENV file
       const templateId = 'template_4tlpkcd';
       const userId = 'sCxpV-9Nj61D4BLq7';
 
@@ -24,11 +24,14 @@ const Contact = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="text-white text-md">
+    <form onSubmit={handleSubmit(onSubmit)} className="text-black text-md">
       <div className="mb-4">
         <label className="block">Name:</label>
         <input
-          {...register('name', { required: 'Name is required' })}
+          {...register('name', {
+            required: 'Name is required',
+            onBlur: () => trigger('name'), // Trigger validation on blur
+          })}
           type="text"
           className="w-1/4 h-[2rem] px-3 py-2 border rounded"
         />
@@ -44,6 +47,7 @@ const Contact = () => {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
               message: 'Invalid email address',
             },
+            onBlur: () => trigger('email'), // Trigger validation on blur
           })}
           type="email"
           className="w-1/4 h-[2rem] px-3 py-2 border rounded"
@@ -54,7 +58,10 @@ const Contact = () => {
       <div className="mb-4">
         <label className="block">Message:</label>
         <textarea
-          {...register('message', { required: 'Message is required' })}
+          {...register('message', {
+            required: 'Message is required',
+            onBlur: () => trigger('message'), // Trigger validation on blur
+          })}
           className="w-full h-[4rem] px-3 py-2 border rounded"
         />
         <p className="text-red-500">{errors.message?.message}</p>
@@ -67,8 +74,7 @@ const Contact = () => {
         Submit
       </button>
     </form>
-
   );
-}
+};
 
-export default Contact
+export default Contact;

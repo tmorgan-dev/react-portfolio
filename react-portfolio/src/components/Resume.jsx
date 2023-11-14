@@ -16,18 +16,28 @@ const Resume = () => {
   };
 
   return (
-    <div>
-      <div id="resume-container" className="text-white text-lg">
-        <h1>Tim Morgan</h1>
-        <p>I have been an IT professional for the past 20 years and have recently been full stack certified. I am proficient in the following skills</p>
-        <ul>
+    <div className="flex flex-col items-center justify-center">
+      <div id="resume-container" className="text-black text-center mt-12">
+        <h1 className="text-6xl font-bold">Tim Morgan</h1>
+        <p className="text-lg mt-12">I have been an IT professional for the past 20 years and have recently been full stack certified. I am proficient in the following skills</p>
+        <ul className="text-base mt-12">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
+          <li>API</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MySQL</li>
+          <li>ORM</li>
+          <li>MVC</li>
+          <li>NoSQL</li>
+          <li>PWA</li>
+          <li>React</li>
+          <li>MERN</li>
         </ul>
       </div>
 
-      <button onClick={downloadPDF} className="bg-blue-500 text-white text-lg px-4 py-2 rounded hover:bg-blue-600">
+      <button onClick={downloadPDF} className="bg-blue-500 text-white text-lg px-4 py-2 rounded mt-4 hover:bg-blue-600">
         Download PDF
       </button>
     </div>

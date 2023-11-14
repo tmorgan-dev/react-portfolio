@@ -2,8 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 
 function Navigation() {
     return (
-        <nav className="bg-gray-800 p-4">
-            <ul className="flex justify-center items-center space-x-4">
+        <nav className="bg-gray-400 p-4">
+            <ul className="flex flex-wrap justify-center items-center space-x-4">
                 <li>
                     <Link
                         to="/"
