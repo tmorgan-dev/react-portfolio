@@ -17,23 +17,89 @@ const Resume = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div id="resume-container" className="text-black text-center mt-12">
-        <h1 className="text-6xl font-bold">Tim Morgan</h1>
-        <p className="text-lg mt-12">I have been an IT professional for the past 20 years and have recently been full stack certified. I am proficient in the following skills</p>
-        <ul className="text-base mt-12">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>API</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MySQL</li>
-          <li>ORM</li>
-          <li>MVC</li>
-          <li>NoSQL</li>
-          <li>PWA</li>
-          <li>React</li>
-          <li>MERN</li>
+      <div id="resume-container" className="text-black text-center mt-12 max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">TIMOTHY ADAM MORGAN</h1>
+        <p className="mb-4">101 South 1300 East</p>
+        <p className="mb-4">Bountiful, UT 84010</p>
+        <p className="mb-4">(801) 759-0354</p>
+
+        <h2 className="text-2xl font-bold mt-8 mb-2">Purpose</h2>
+        <p className="mb-4">To obtain employment that offers the opportunity to help people improve their lives through software.</p>
+
+        <h2 className="text-2xl font-bold mt-8 mb-2">Professional Experience</h2>
+
+        {/* AvidXchange */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold">AvidXchange, Salt Lake City, UT</h3>
+          <p className="italic">August 2007 - Present</p>
+
+          <p className="font-bold">Integrations Consultant II</p>
+          <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+            <li className="mb-2">Assist customers with deployment and configuration of integrations</li>
+            {/* Add other relevant points */}
+          </ul>
+
+          <p className="font-bold">Project Coordinator</p>
+          <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+            <li className="mb-2">Assist customers with installation, setup, and use of Create-A-Check</li>
+            {/* Add other relevant points */}
+          </ul>
+
+          <p className="font-bold">Team Lead/Level 3 Tech Support Agent</p>
+          <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+            <li className="mb-2">Assist customers with installation, setup, and maintenance of Create-A-Check</li>
+            {/* Add other relevant points */}
+          </ul>
+        </div>
+
+        {/* Ikano Communications */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold">Ikano Communications, Salt Lake City, UT</h3>
+          <p className="italic">January 2005 - August 2007</p>
+
+          <p className="font-bold">Tech Support Agent</p>
+          <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+            <li className="mb-2">Technical support for all Windows and Macintosh Operating Systems</li>
+            {/* Add other relevant points */}
+          </ul>
+        </div>
+
+        {/* Teleperformance USA */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold">Teleperformance USA, Salt Lake City, UT</h3>
+          <p className="italic">August 2004 - January 2005</p>
+
+          <p className="font-bold">Tech Support Agent</p>
+          <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+            <li className="mb-2">Technical Support for Microsoft MSN customers</li>
+            {/* Add other relevant points */}
+          </ul>
+        </div>
+
+        {/* Deer Valley Ski Resort */}
+        {/* Add other relevant sections following the same structure */}
+
+        <h2 className="text-2xl font-bold mt-8 mb-2">Education</h2>
+        <div className="mb-8">
+          <p className="font-bold">University Of Utah</p>
+          <p className="italic">June 2023 - December 2023</p>
+          <p>Full Stack Coding Boot Camp</p>
+        </div>
+
+        {/* Add other relevant sections following the same structure */}
+
+        <h2 className="text-2xl font-bold mt-8 mb-2">Proficiency In</h2>
+        <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+          <li className="mb-2">HTML</li>
+          <li className="mb-2">CSS</li>
+          {/* Add other relevant skills */}
+        </ul>
+
+        <h2 className="text-2xl font-bold mt-8 mb-2">Hobbies and Clubs</h2>
+        <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
+          <li className="mb-2">Key Club Member</li>
+          <li className="mb-2">National Junior Olympic Archers League 1997</li>
+          {/* Add other hobbies and clubs */}
         </ul>
       </div>
 
@@ -41,6 +107,7 @@ const Resume = () => {
         Download PDF
       </button>
     </div>
+
   );
 };
 
