@@ -1,12 +1,13 @@
 import React from 'react'
 import profilePic from "../assets/images/profile.jpg"
+import { motion } from "framer-motion"
 
 
 const AboutMe = () => {
     return (
         <div className="aboutMe flex items-center">
             <div className="divWrapper">
-                <img src={profilePic} className="max-w-full h-auto" alt="Profile" />
+                <motion.img animate={{ scale: 1 }} initial={{ scale: 0 }} src={profilePic} className="max-w-full h-auto" alt="Profile" />
             </div>
             <div className="content ml-4 text-white text-lg">
                 <p>
