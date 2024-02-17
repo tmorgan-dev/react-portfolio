@@ -7,12 +7,24 @@ const AboutMe = () => {
     return (
         <div className="aboutMe flex items-center">
             <div className="divWrapper">
-                <motion.img animate={{ scale: 1 }} initial={{ scale: 0 }} src={profilePic} className="max-w-full h-auto" alt="Profile" />
+                <motion.img 
+                    animate={{ scale: 1 }} 
+                    initial={{ scale: 0 }}
+                    transition={{ duration: .8, delay: 1 }}
+                    src={profilePic} className="max-w-full h-auto" alt="Profile" />
             </div>
             <div className="content ml-4 text-white text-lg">
-                <p>
-                    I live in Bountiful, Utah with my wife and son. I am currently attending the University of Utah Coding Bootcamp for Full-stack Web Development. I work at AvidXchange implementing software designed to automate the accounts payable process. My hobbies include camping, comic books, video games, and going to concerts with my wife.
-                </p>
+                <motion.p 
+                animate={{ y: 0 }}
+                initial={{ y: -500 }}
+                transition={{ duration: 1 }}>
+                    I live in Bountiful, Utah with my wife and son. 
+                    I work at AvidXchange implementing software designed to automate the accounts payable process. 
+                    I am also a full stack web developer, specializing in small business. 
+                    Click on Portfolio to see some of my work. 
+                    Click on Contact to send an email to me directly. 
+                    Click on Resume to view and download a copy of my resume.
+                </motion.p>
             </div>
         </div>
     )

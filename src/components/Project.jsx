@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css"
+import { motion } from "framer-motion"
 
 import dndquickImage from "../assets/images/dndquick.png";
 import masterBuilderImage from "../assets/images/masterBuilder.png";
@@ -6,10 +7,19 @@ import employeeDatabaseImage from "../assets/images/employeeDatabase.png";
 import socialNetworkApiImage from "../assets/images/socialnetworkapi.png";
 import readmeGeneratorImage from "../assets/images/readmeGenerator.png";
 import weatherDashboardImage from "../assets/images/weatherDashboard.png";
+import theWebImage from "../assets/images/theWeb.png";
 
 const projects = [
     {
         id: 1,
+        name: "theWeb",
+        description: "A social networking platform",
+        image: theWebImage,
+        deployedApp: "https://theweb-production.up.railway.app/",
+        repo: "https://github.com/tmorgan-dev/theWeb",
+    },
+    {
+        id: 2,
         name: "DND Quick",
         description: "An app for creating character sheets",
         image: dndquickImage,
@@ -17,7 +27,7 @@ const projects = [
         repo: "https://github.com/tmorgan-dev/dnd-quick",
     },
     {
-        id: 2,
+        id: 3,
         name: "masterBuilder",
         description: "An app for tracking your LEGO collection",
         image: masterBuilderImage,
@@ -25,23 +35,23 @@ const projects = [
         repo: "https://github.com/tmorgan-dev/Master-Builder",
     },
     {
-        id: 3,
+        id: 4,
         name: "employeeDatabase",
-        description: "A CLI driven MySQL database for managing employees",
+        description: "A CLI driven MySQL database",
         image: employeeDatabaseImage,
         deployedApp: "https://github.com/tmorgan-dev/employee-database",
         repo: "https://github.com/tmorgan-dev/employee-database",
     },
     {
-        id: 4,
+        id: 5,
         name: "Social Network API",
-        description: "A back end database for a social network built with MongoDB",
+        description: "MongoDB backend database",
         image: socialNetworkApiImage,
         deployedApp: "https://github.com/tmorgan-dev/social-network-api",
         repo: "https://github.com/tmorgan-dev/social-network-api",
     },
     {
-        id: 5,
+        id: 6,
         name: "ReadMe Generator",
         description: "An CLI app for creating ReadMe.md files",
         image: readmeGeneratorImage,
@@ -49,9 +59,9 @@ const projects = [
         repo: "https://github.com/tmorgan-dev/readme-generator",
     },
     {
-        id: 6,
+        id: 7,
         name: "Weather Dashboard",
-        description: "An app to quickly get the current weather and 5 day forecast using OpenWeather API",
+        description: "5 Day Forecast for Any City",
         image: weatherDashboardImage,
         deployedApp: "https://tmorgan-dev.github.io/weather-dashboard/",
         repo: "https://github.com/tmorgan-dev/weather-dashboard",
@@ -62,8 +72,12 @@ function Project() {
     return (
         <div className="flex flex-wrap justify-center">
             {projects.map((project) => (
-                <div key={project.id} className="max-w-xs mx-4 my-4 bg-white rounded-md overflow-hidden shadow-md">
-                    <img className="w-full h-32 object-cover" src={project.image} alt={project.name} />
+                <motion.div 
+                animate={{ scale: 1 }} 
+                initial={{ scale: 0 }}
+                transition={{duration: .8 }}
+                key={project.id} className="max-w-xs mx-3 my-3 bg-white rounded-md overflow-hidden shadow-md">
+                    <img className="w-full h-64 object-cover" src={project.image} alt={project.name} />
                     <div className="p-4">
                         <h5 className="text-lg font-semibold">{project.name}</h5>
                         <p className="text-gray-700">{project.description}</p>
@@ -86,7 +100,7 @@ function Project() {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
     );
