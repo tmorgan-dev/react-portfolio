@@ -1,8 +1,10 @@
 import React from 'react'
+// Importing profile picture
 import profilePic from "../assets/images/profile.jpg"
+// Importing motion from Framer Motion library for animations
 import { motion } from "framer-motion"
 
-
+// Functional component for the About Me section
 const AboutMe = () => {
     return (
         <div className="aboutMe flex items-center">

@@ -55,17 +55,18 @@ const Contact = () => {
         <p className="text-red-500">{errors.email?.message}</p>
       </div>
 
-      <div className="mb-4">
+      <div className="mb-8">
         <label className="block">Message:</label>
         <textarea
           {...register('message', {
             required: 'Message is required',
             onBlur: () => trigger('message'), // Trigger validation on blur
           })}
-          className="w-full h-[4rem] px-3 py-2 border rounded"
+          className="w-full w-[50rem] h-[8rem] px-3 py-2 border rounded" // Adjusted width using responsive classes
         />
         <p className="text-red-500">{errors.message?.message}</p>
       </div>
+
 
       <button
         type="submit"
