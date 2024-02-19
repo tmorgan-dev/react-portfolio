@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 function Navigation() {
-    const [selectedLink, setSelectedLink] = useState(null);
+    const [selectedLink, setSelectedLink] = useState("/");
 
     const handleLinkClick = (event, path) => {
         setSelectedLink(path);
