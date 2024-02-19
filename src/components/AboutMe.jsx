@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
     return (
-        <div className="flex items-center">
-            <div className="imageWrapper mr-4"> {/* Wrapper div for the image */}
+        <div className="flex flex-col md:flex-row items-center">
+            <div className="md:order-2 mb-4 md:mb-0 md:mr-4"> {/* Wrapper div for the image */}
                 <motion.img
                     animate={{ scale: 1 }}
                     initial={{ scale: 0 }}
                     transition={{ duration: .7, delay: 1 }}
                     src={profilePic} className="w-auto h-auto" alt="Profile" />
             </div>
-            <div className="content text-white text-lg flex-1">
+            <div className="content text-white text-lg flex-1 md:order-1">
                 <motion.p
                     animate={{ y: 0 }}
                     initial={{ y: -500 }}
