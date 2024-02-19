@@ -9,22 +9,28 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, e) => {
     try {
       // TODO: Move these to a .ENV file
       const templateId = 'template_4tlpkcd';
       const userId = 'sCxpV-9Nj61D4BLq7';
-
+  
       await emailjs.send('default_service', templateId, data, userId);
-
+  
       console.log('Form submitted successfully!');
+  
+      // Display window prompt
+      window.alert('Message Sent. Thank you!');
+  
+      // Clear form fields
+      e.target.reset();
     } catch (error) {
       console.error('Error submitting form:', error);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="text-black text-md">
+    <form onSubmit={handleSubmit(onSubmit)} className="text-black text-md mt-32">
       <div className="mb-4">
         <label className="block">Name:</label>
         <input
@@ -62,7 +68,7 @@ const Contact = () => {
             required: 'Message is required',
             onBlur: () => trigger('message'), // Trigger validation on blur
           })}
-          className="w-full lg:w-1/2 h-[8rem] px-3 py-2 border rounded" // Adjusted width using responsive classes
+          className="w-full lg:w-1/2 h-[13rem] px-3 py-2 border rounded" // Adjusted width using responsive classes
         />
         <p className="text-red-500">{errors.message?.message}</p>
       </div>
@@ -70,7 +76,7 @@ const Contact = () => {
 
       <button
         type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600"
       >
         Submit
       </button>
