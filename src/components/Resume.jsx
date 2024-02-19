@@ -17,6 +17,9 @@ const Resume = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
+      <button onClick={downloadPDF} className="bg-blue-500 text-white text-lg px-4 py-2 rounded mt-4 hover:bg-blue-600">
+        Download as PDF
+      </button>
       <div id="resume-container" className="text-black text-center mt-12 max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">TIMOTHY ADAM MORGAN</h1>
         <p className="mb-4">101 South 1300 East</p>
@@ -103,9 +106,7 @@ const Resume = () => {
         </ul>
       </div>
 
-      <button onClick={downloadPDF} className="bg-blue-500 text-white text-lg px-4 py-2 rounded mt-4 hover:bg-blue-600">
-        Download PDF
-      </button>
+
     </div>
 
   );

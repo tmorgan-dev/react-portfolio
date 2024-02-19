@@ -70,12 +70,12 @@ const projects = [
 
 function Project() {
     return (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center py-auto pb-16">
             {projects.map((project) => (
                 <motion.div 
                 animate={{ scale: 1 }} 
                 initial={{ scale: 0 }}
-                transition={{duration: .8 }}
+                transition={{duration: .7, staggerChildren: .3 }}
                 key={project.id} className="max-w-xs mx-3 my-3 bg-white rounded-md overflow-hidden shadow-md">
                     <img className="w-full h-64 object-cover" src={project.image} alt={project.name} />
                     <div className="p-4">

@@ -1,13 +1,16 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 function Navigation() {
+    const location = useLocation();
+
     return (
         <nav className="bg-gray-400 p-4">
             <ul className="flex flex-wrap justify-center items-center space-x-4">
                 <li>
                     <Link
                         to="/"
-                        className="text-white py-2 px-4 rounded focus:outline-none focus:bg-gray-600"
+                        className={`text-white py-2 px-4 rounded focus:outline-none ${location.pathname === "/" ? "bg-gray-600" : ""
+                            }`}
                     >
                         About Me
                     </Link>

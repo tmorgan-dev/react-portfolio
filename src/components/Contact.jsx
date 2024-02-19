@@ -62,7 +62,7 @@ const Contact = () => {
             required: 'Message is required',
             onBlur: () => trigger('message'), // Trigger validation on blur
           })}
-          className="w-full w-[50rem] h-[8rem] px-3 py-2 border rounded" // Adjusted width using responsive classes
+          className="w-full lg:w-1/2 h-[8rem] px-3 py-2 border rounded" // Adjusted width using responsive classes
         />
         <p className="text-red-500">{errors.message?.message}</p>
       </div>
