@@ -1,4 +1,5 @@
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import React from "react"; // Import React if not already imported
 
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -7,7 +8,6 @@ import Footer from './components/Footer';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-
 
 function App() {
   const router = createBrowserRouter(
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
