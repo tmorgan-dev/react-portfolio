@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 function Navigation() {
+    const location = useLocation();
     const [selectedLink, setSelectedLink] = useState("/");
+
+    useEffect(() => {
+        setSelectedLink(location.pathname);
+    }, [location]);
 
     const handleLinkClick = (event, path) => {
         setSelectedLink(path);
