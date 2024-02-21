@@ -12,11 +12,11 @@ const Contact = () => {
   const onSubmit = async (data, e) => {
     try {
       // TODO: Move these to a .ENV file
-      // const templateId = 'template_4tlpkcd';
-      // const userId = 'sCxpV-9Nj61D4BLq7';
+      const templateId = 'template_4tlpkcd';
+      const userId = 'sCxpV-9Nj61D4BLq7';
 
-      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_4tlpkcd';
-      const userId = process.env.REACT_APP_EMAILJS_USER_ID || 'sCxpV-9Nj61D4BLq';
+      // const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_4tlpkcd';
+      // const userId = process.env.REACT_APP_EMAILJS_USER_ID || 'sCxpV-9Nj61D4BLq';
   
       console.log(templateId)
       console.log(userId)
