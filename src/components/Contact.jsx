@@ -11,19 +11,19 @@ const Contact = () => {
 
   const onSubmit = async (data, e) => {
     try {
-      // TODO: Move these to a .ENV file
-      // const templateId = 'template_4tlpkcd';
-      // const userId = 'sCxpV-9Nj61D4BLq7';
+      // TODO: Create a server to house these in a .ENV file
+      const templateId = 'template_4tlpkcd';
+      const userId = 'sCxpV-9Nj61D4BLq7';
 
-      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-      const userId = process.env.REACT_APP_EMAILJS_USER_ID;
-  
-      console.log(templateId)
-      console.log(userId)
+      const formData = {
+        ...data,
+        from_name: data.name,
+        reply_to: data.email,
+      };
 
-      await emailjs.send('default_service', templateId, data, userId);
+      await emailjs.send('default_service', templateId, formData, userId);
   
-      console.log('Form submitted successfully!');
+      console.log(formData);
   
       // Display window prompt
       window.alert('Message Sent. Thank you!');
