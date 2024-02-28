@@ -51,6 +51,17 @@ function Navigation() {
                         Resume
                     </Link>
                 </li>
+                {/* Add Link to Cert component */}
+                <li>
+                    <Link
+                        to="/cert"
+                        className={`text-white py-2 px-4 rounded ${selectedLink === "/cert" ? "bg-gray-600" : ""
+                            }`}
+                        onClick={(e) => handleLinkClick(e, "/cert")}
+                    >
+                        Certificate
+                    </Link>
+                </li>
             </ul>
             <Outlet />
         </nav>

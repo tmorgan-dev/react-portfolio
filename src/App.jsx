@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import AboutMe from './components/AboutMe';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Cert from './components/Cert';
 
 function App() {
   const router = createBrowserRouter(
@@ -17,6 +18,7 @@ function App() {
       <Route path="/project" element={<Project />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
+      <Route path="/cert" element={<Cert />} />
       </Route>
     )
   )
