@@ -21,31 +21,41 @@ const Resume = () => {
         Download as PDF
       </button>
       <div id="resume-container" className="text-black text-center mt-12 max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">TIMOTHY ADAM MORGAN</h1>
-        <p className="mb-4">101 South 1300 East</p>
-        <p className="mb-4">Bountiful, UT 84010</p>
-        <p className="mb-4">(801) 759-0354</p>
-
-        <h2 className="text-2xl font-bold mt-8 mb-2">Purpose</h2>
-        <p className="mb-4">To obtain employment that offers the opportunity to help people improve their lives through software.</p>
+        <div id="contact-container">
+          <h1 className="text-4xl font-bold mb-4">TIMOTHY ADAM MORGAN</h1>
+          <p className="mb-4">101 South 1300 East</p>
+          <p className="mb-4">Bountiful, UT 84010</p>
+          <p className="mb-4">(801) 759-0354</p>
+        </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-2">Professional Experience</h2>
 
         {/* AvidXchange */}
         <div className="mb-8">
-          <h3 className="text-xl font-bold">AvidXchange, Salt Lake City, UT</h3>
-          <p className="italic">August 2007 - Present</p>
-
+          <div id='avid-header-container'>
+            <h3 className="text-xl font-bold text-left">AvidXchange</h3>
+            <p className="italic text-right">August 2007 - Present</p>
+          </div>
           <p className="font-bold">Integrations Consultant II</p>
           <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
             <li className="mb-2">Assist customers with deployment and configuration of integrations</li>
-            {/* Add other relevant points */}
+            <li className="mb-2">Create and update integration mappings via the Altova Map Force application.</li>
+            <li className="mb-2">Monitor and maintain an escalation queue from the support team to assist with back end updates</li>
+            <li className="mb-2">Meet with prospective clients to demo software for the sales team</li>
+            <li className="mb-2">Create and maintain documentation on custom interfaces</li>
+            <li className="mb-2">Attend daily scrum meetings with engineering to adhere to an Agile work practice</li>
+            <li className="mb-2">Document all projects and track amount of time spent on a daily basis</li>
+            <li className="mb-2">Follow up on all client emails within 24 hours</li>
           </ul>
 
           <p className="font-bold">Project Coordinator</p>
           <ul className="list-disc pl-8 mb-2"> {/* Reduced margin-bottom for list items */}
             <li className="mb-2">Assist customers with installation, setup, and use of Create-A-Check</li>
-            {/* Add other relevant points */}
+            <li className="mb-2"></li>
+            <li className="mb-2"></li>
+            <li className="mb-2"></li>
+            <li className="mb-2"></li>
+            <li className="mb-2"></li>
           </ul>
 
           <p className="font-bold">Team Lead/Level 3 Tech Support Agent</p>
