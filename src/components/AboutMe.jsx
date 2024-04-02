@@ -21,7 +21,7 @@ const AboutMe = () => {
                     I work at AvidXchange implementing software designed to automate the accounts payable process.
                     I am also a full stack web developer, specializing in small business.
                     Click on Portfolio to see some of my work.
-                    Click on Contact to send an email to me directly.
+                    Click on Contact to send me an email.
                     Click on Resume to view and download a copy of my resume.
                 </motion.p>
             </div>
